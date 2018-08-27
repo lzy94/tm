@@ -1,0 +1,15 @@
+@mixin kernel($key, $val) {
+    -webkit-#{$key}: $val;
+    -moz-#{$key}: $val;
+    -ms-#{$key}: $val;
+    #{$key}: $val;
+}
+// 用于继承的样式
+.transition{
+    @include kernel(transition, all .3s);
+}
+.ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
